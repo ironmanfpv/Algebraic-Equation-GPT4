@@ -50,7 +50,7 @@ async function extractEquationFromImage(image) {
                             type: "image_url",
                             image_url: {
                                 url: `data:${mime};base64,${data}`,
-                                detail: "low-res",
+                                detail: "low", //low, high or auto 
                             }
                         }
                     ]
