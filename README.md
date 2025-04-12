@@ -11,7 +11,7 @@ This is an integrated MULTI-MODAL version of the previous version of Algebraic E
 
 In version 1, users could input equation via camera, photo file, text input via keyboard or (iOS) stylus.<br> 
 In version 3.5, Speech to Text capabilities is added as the 5th option of query input.<br>
-In this version, text equation detection from image is improved via OCR. Only 1 API key required.<br> 
+In this version, text equation detection from image is improved via OCR. Only 1 API key is required.<br> 
 Algebraic Equation GPT4 understand equations said in natural English language.<br>
 Say the equation as you would read it out and Algebraic Equation GPT4 will transcribe.<br> 
 
@@ -22,7 +22,7 @@ Say the equation as you would read it out and Algebraic Equation GPT4 will trans
 # INSTRUCTIONS: #
 
 Algebraic Equation GPT4 was developed modularly and independently from ground up.<br>
-Text, Image to Text and Speech to text capabilities were incrementally integrated with the GPT.
+Text, Image to Text and Speech to text capabilities were incrementally integrated with the GPT.<br>
 Read the documentation.
 
 To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the app !
@@ -50,7 +50,7 @@ To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the ap
 
 This project is built with the inspiration of offering learners algebra self-help.
 Educators can also generate quick notes on equation solving explanation steps as they deem suitable. 
-Educators can scale this repository accordingly. Do reference the originator of this project.
+Interested collaborators can scale this repository accordingly. Do reference the originator of this project.
 Please refer to LICENSE for details.
 
 If you are interested in my other projects, please search google: Github ironmanfpv. 
