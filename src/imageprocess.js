@@ -82,4 +82,29 @@ async function extractEquationFromImage(image) {
         console.error('[Vision] Extraction Error:', error);
         throw new Error(`Vision Processing Failed: ${error.message}`);
     }
+
+        // 8. Add HEIC conversion handling for iOS devices:
+    async function convertHEICtoJPG(file) {
+    if (file.type === 'image/heic' && window.HEIC2JPG) {
+        return await HEIC2JPG.convert(file);
+    }
+    return file;
+}
+        //9.    Try additional image processing saveguards //
+    const { mime, data } = await new Promise(async (resolve) => {
+        // Add orientation correction
+        const img = await loadImage(file);
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        canvas.toBlob(blob => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(/*...*/);
+            reader.readAsDataURL(blob);
+        }, 'image/jpeg');
+    });
+    // end of saveguard codes//
+
 }
