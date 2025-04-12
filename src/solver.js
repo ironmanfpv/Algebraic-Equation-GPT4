@@ -1,6 +1,6 @@
 async function solveEquation(equation, userName) {
     try {
-        if (!apiKey) throw new Error('API key is not set. Please go back and confirm your API key.');
+        if (!window.openAIKey) throw new Error('API key is not set. Please go back and confirm your API key.');
 
         const requestPayload = {
             model: "gpt-3.5-turbo",
