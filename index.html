@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Algebraic Equation GPT</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="initialInterface" class="container">
+        <div class="title">Algebraic Equation GPT4</div>
+        <div class="subtitle">
+            The first web based equation GPT.<br>
+            Use image, speech or text input.<br>
+            Obtain the solution explanation.
+        </div>
+        <div class="window">
+            <h2>Enter Your Name*</h2>
+            <input type="text" id="userName" placeholder="Your Name">
+        </div>
+        <div class="window">
+            <h2>Enter OpenAI API Key*</h2>
+            <input type="text" id="apiKey" placeholder="Your OpenAI API Key">
+            <div class="mask-toggle">
+                <input type="checkbox" id="maskKey" onchange="toggleKeyMask()">
+                <label for="maskKey">Mask API Key</label>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="confirmButton">Confirm</button>
+            <button id="clearButton">Clear</button>
+        </div>
+        <div class="opensource-note">
+            Algebraic Equation GPT4 is open sourced.
+        </div>
+    </div>
+    
+    <div id="mainApplication" class="container hidden">
+        <div class="title">Algebraic Equation GPT4</div>
+        <div class="window" id="uploadPictureWindow">
+            <h2>Upload Picture</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <div id="imageContainer" class="dynamic-height">
+                <img id="uploadedImage" src="" alt="Uploaded Image">
+            </div>
+            <button id="clearImageButton" class="hidden">Clear Image</button>
+        </div>
+
+        <div class="window">
+            <h2>Extracted Equation</h2>
+            <p class="editable-note">Algebraic Equation GPT4 is powered by OpenAI Vision. Extracted equation is displayed in LaTex.</p>
+            <p class="editable-note">Algebraic Equation GPT4 understands natural language. You may describe equations the way it is read out.</p>
+            <p class="editable-note">Edit equation by keystrokes. Use "()", "[]" to nest expressions, "/" for fractions, "^" for exponents. "root" for radicals.</p>
+            <textarea id="extractedEquation" class="dynamic-height"></textarea>
+            <div class="button-container">
+                <button id="sayEquationButton" ontouchstart="">Say Equation</button>
+                <button id="readButton">Extract Equation from Picture</button>
+                <button id="clearEquationButton">Clear</button>
+            </div>
+            <div id="extractionStatus" class="status-message"></div>
+        </div>
+
+        <div class="window">
+            <h2>Solution and Explanation</h2>
+            <p class="editable-note">Algebraic Equation GPT4 is evolving with OpenAI. It may make calculation errors. Always verify the generated output.</p>
+            <div id="solutionContainer">
+                <div id="solutionOutput" class="dynamic-height math-display"></div>
+                <div id="loadingIndicator">
+                    <div class="loading-spinner"></div>
+                    <span>Processing...</span>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="solveExplainButton">Solve, Analyse and Explain</button>
+                <button id="clearSolutionButton">Clear</button>
+                <button id="exitButton">Exit</button>
+            </div>
+        </div>
+
+        <div class="window">
+            <h2>AR Device</h2>
+            <button id="connectButton">Connect</button>
+            <button id="showButton">Show</button>
+        </div>
+    </div>
+
+    <div id="equation-output" class="math-container"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="./src/imageprocess.js"></script>
+    <script src="./src/script.js"></script>
+    <script src="./src/audiototext.js"></script>
+    <script src="./src/solver.js"></script>
+
+</body>
+</html>
