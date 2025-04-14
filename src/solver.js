@@ -3,10 +3,10 @@ async function solveEquation(equation, userName) {
         if (!window.openAIKey) throw new Error('API key is not set. Please go back and confirm your API key.');
 
         const requestPayload = {
-            model: "gpt-3.5-turbo",
+            model: "o1-mini", // Model options: gpt-3.5-turbo, o1-mini etc. 
             messages: [
                 {
-                    role: "system",
+                    role: "user",   // "system" for gpt-3.5-turbo, "user" for o1-mini
                     content: `You are a mathematics professor. Format all mathematical expressions using LaTeX:
                     - Use \\(...\\) for inline equations
                     - Use \\[...\\] for display equations
@@ -24,8 +24,8 @@ async function solveEquation(equation, userName) {
                               provide the solution. Ensure to explain each step clearly and use LaTeX for all mathematical expressions.` 
                 }
             ],
-            max_tokens: 2000,
-            temperature: 0.3
+            max_completion_tokens: 2000, //max_tokens for gpt-3.5-turbo, max_completion_tokens for o1-mini
+            temperature: 1               // 0.3 for gpt-3.5-turbo, 1 for o1-mini
         };
 
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
