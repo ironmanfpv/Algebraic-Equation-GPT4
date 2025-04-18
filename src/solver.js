@@ -3,7 +3,7 @@ async function solveEquation(equation, userName) {
         if (!window.openAIKey) throw new Error('API key is not set. Please go back and confirm your API key.');
 
         const requestPayload = {
-            model: "o1-mini", // Model options: gpt-3.5-turbo, o1-mini etc. 
+            model: "o3-mini", // Upgraded to o3-mini (18 Feb'2025) : Previous Model options: gpt-3.5-turbo, o1-mini etc. 
             messages: [
                 {
                     role: "user",   // "system" for gpt-3.5-turbo, "user" for o1-mini
@@ -24,7 +24,7 @@ async function solveEquation(equation, userName) {
                               provide the solution. Ensure to explain each step clearly and use LaTeX for all mathematical expressions.` 
                 }
             ],
-            max_completion_tokens: 2000, //max_tokens for gpt-3.5-turbo, max_completion_tokens for o1-mini
+            max_completion_tokens: 2000, // max_tokens for gpt-3.5-turbo, max_completion_tokens for o1-mini
             temperature: 1               // 0.3 for gpt-3.5-turbo, 1 for o1-mini
         };
 

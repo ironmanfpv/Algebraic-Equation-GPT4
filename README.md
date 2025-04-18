@@ -1,6 +1,6 @@
 # Algebraic Equation GPT4
 
-Algebraic Equation GPT4 is the latest and most complete version of the project yet. 
+Algebraic Equation GPT4 is the most complete and most powerful version of the project yet. 
 This repo combines image text recognition API,Speech to Text API and a LLM.
 A photo or an image containing Mathematics equation(s) is fed to the app.
 The web application implements OPENAI Vision API to extract text from the source.
@@ -57,4 +57,4 @@ If you are interested in my other projects, please search google: Github ironman
 For collaboration interests, email me @ akitaishi@gmail.com 👋
 Linkedin: www.linkedin.com/in/jason-n-b515a89a  🌍
 
-12/04/2025
+18/04/2025 (Good Friday)
