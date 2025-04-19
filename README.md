@@ -15,6 +15,8 @@ In this version, text equation detection from image is improved via OCR. Only 1 
 Algebraic Equation GPT4 understand equations said in natural English language.<br>
 Say the equation as you would read it out and Algebraic Equation GPT4 will transcribe.<br> 
 
+https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/demo/Demo%20of%20Algebraic%20Equation%20GPT4.mp4
+
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/img/img%200.jpg">
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/img/img%201.jpg">
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/img/img%202.jpg">
@@ -28,7 +30,6 @@ Read the documentation.
 To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the app !
 
 ## A. Generate OPENAI API keys ##
-
 1.  Access OPENAI>API via Sign up or Log in.
 2.  Click settings (Nut icon on top right, beside profile).
 3.  Left Column, under organisation >API Keys> + Create New Secret Key.
@@ -36,7 +37,6 @@ To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the ap
 5.  Click Copy to copy the secret key. Store it somewhere safe to be used in Algebraic Equation GPT4.
 
 ## B. Procedure to use a hosted version of Algebriac Equation GPT ##
-
 1.  Key in your name.
 2.  Check Mask API key, then paste your API key in and click confirmed. (Ensure both name and API keys are entered.)
 3.  Take a picture, provide an image or key an equation for Algebraic Equation GPT4 to solve and analyse.
@@ -47,7 +47,6 @@ To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the ap
 8.  Click "Exit" to end the app, logging out, resetting application to default.
 
 ## C. Inspiration ##
-
 This project is built with the inspiration of offering learners algebra self-help.
 Educators can also generate quick notes on equation solving explanation steps as they deem suitable. 
 Interested collaborators can scale this repository accordingly. Do reference the originator of this project.
