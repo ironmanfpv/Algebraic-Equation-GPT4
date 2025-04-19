@@ -15,7 +15,7 @@ In this version, text equation detection from image is improved via OCR. Only 1 
 Algebraic Equation GPT4 understand equations said in natural English language.<br>
 Say the equation as you would read it out and Algebraic Equation GPT4 will transcribe.<br> 
 
-https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/demo/Demo%20of%20Algebraic%20Equation%20GPT4.mp4
+https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/demo/DemoofAlgebraicEquationGPT4.mp4
 
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/img/img%200.jpg">
 <img src= "https://github.com/ironmanfpv/Algebraic-Equation-GPT4/blob/main/img/img%201.jpg">
