@@ -24,7 +24,7 @@ async function solveEquation(equation, userName) {
                               provide the solution. Ensure to explain each step clearly and use LaTeX for all mathematical expressions.` 
                 }
             ],
-            max_completion_tokens: 2000, // max_tokens for gpt-3.5-turbo, max_completion_tokens for o1-mini
+            max_completion_tokens: 3000, // max_tokens for gpt-3.5-turbo, max_completion_tokens for o1-mini
             temperature: 1               // 0.3 for gpt-3.5-turbo, 1 for o1-mini
         };
 
