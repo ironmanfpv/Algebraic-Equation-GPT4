@@ -36,7 +36,7 @@ To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the ap
 4.  Select Key owned by you> Type in Name>Select Default project > Click Create Secret Key.
 5.  Click Copy to copy the secret key. Store it somewhere safe to be used in Algebraic Equation GPT4.
 
-## B. Procedure to use a hosted version of Algebriac Equation GPT ##
+## B. Procedure to use a hosted version of Algebraic Equation GPT4 ##
 1.  Key in your name.
 2.  Check Mask API key, then paste your API key in and click confirmed. (Ensure both name and API keys are entered.)
 3.  Take a picture, provide an image or key an equation for Algebraic Equation GPT4 to solve and analyse.
