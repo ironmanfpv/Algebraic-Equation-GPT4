@@ -37,23 +37,24 @@ To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the ap
 5.  Click Copy to copy the secret key. Store it somewhere safe to be used in Algebraic Equation GPT4.
 
 ## B. Procedure to use a hosted version of Algebraic Equation GPT4 ##
-1.  Key in your name.
+1.  Key in your name, an identifer of your choice.
 2.  Check Mask API key, then paste your API key in and click confirmed. (Ensure both name and API keys are entered.)
-3.  Take a picture, provide an image or key an equation for Algebraic Equation GPT4 to solve and analyse.
-4.  Alternatively, Click the "Say Equation" button to activate mic and record audio equation input. 
-5.  Click the button again to end audio recording and have it transcribed. Hybrid input is supported.
-6.  In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
-7.  If solution is cryptic or unclear, repeating Step 6 will regenerate another output.
-8.  Click "Exit" to end the app, logging out, resetting application to default.
+3.  When both fields are filled and confirmed, the app continues to the main page. No authentication takes place yet.
+4.  At the main page, note that the various functions of GPT4 will only work with a valid OPEN AI API key.
+5.  Take a picture, provide an image or key an equation for Algebraic Equation GPT4 to solve and analyse.
+6.  Alternatively, Click the "Say Equation" button to activate mic and record audio equation input. 
+7.  Click the button again to end audio recording and have it transcribed. Hybrid input is supported.
+8.  In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
+9.  If solution is cryptic or unclear, repeating Step 8 will regenerate another output.
+10.  Click "Exit" to end the app, logging out, resetting application to default. No API keys are stored.
 
 ## C. Inspiration ##
 This project is built with the inspiration of offering learners algebra self-help.
 Educators can also generate quick notes on equation solving explanation steps as they deem suitable. 
 Interested collaborators can scale this repository accordingly. Do reference the originator of this project.
-Please refer to LICENSE for details.
+Please refer to MIT LICENSE for details.
 
 If you are interested in my other projects, please search google: Github ironmanfpv. 
 For collaboration interests, email me @ akitaishi@gmail.com 👋
 Linkedin: www.linkedin.com/in/jason-n-b515a89a  🌍
-
 18/04/2025 (Good Friday)
