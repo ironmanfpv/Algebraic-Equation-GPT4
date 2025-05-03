@@ -3,7 +3,7 @@
 Algebraic Equation GPT4 is the most complete and most powerful version of the project yet. 
 This repo combines image text recognition API,Speech to Text API and a LLM.
 A photo or an image containing Mathematics equation(s) is fed to the app.
-The web application implements OPENAI Vision API to extract text from the source.
+The web application implements OpenAI Vision API to extract text from the source.
 Equation(s) to be solved may also be keyed in or written out, to edit the extracted text.
 The extracted equation is fed to an LLM which then analyses and solves it.
 A solution, together with its comprehensive explanation is output to the user.
@@ -27,10 +27,10 @@ Algebraic Equation GPT4 was developed modularly and independently from ground up
 Text, Image to Text and Speech to text capabilities were incrementally integrated with the GPT.<br>
 Read the documentation.
 
-To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the app !
+To use it, follow Section A and B, have your OpenAI API key ready, enjoy the app !
 
-## A. Generate OPENAI API keys ##
-1.  Access OPENAI>API via Sign up or Log in.
+## A. Generate OpenAI API keys ##
+1.  Access OpenAI>API via Sign up or Log in.
 2.  Click settings (Nut icon on top right, beside profile).
 3.  Left Column, under organisation >API Keys> + Create New Secret Key.
 4.  Select Key owned by you> Type in Name>Select Default project > Click Create Secret Key.
@@ -40,13 +40,13 @@ To use it, follow Section A and B, have your OPEN AI API key ready, enjoy the ap
 1.  Key in your name, an identifer of your choice.
 2.  Check Mask API key, then paste your API key in and click confirmed. (Ensure both name and API keys are entered.)
 3.  When both fields are filled and confirmed, the app continues to the main page. No authentication takes place yet.
-4.  At the main page, note that the various functions of GPT4 will only work with a valid OPEN AI API key.
+4.  At the main page, note that the various functions of GPT4 will only work with a valid OpenAI API key.
 5.  Take a picture, provide an image or key an equation for Algebraic Equation GPT4 to solve and analyse.
 6.  Alternatively, Click the "Say Equation" button to activate mic and record audio equation input. 
 7.  Click the button again to end audio recording and have it transcribed. Hybrid input is supported.
 8.  In the Solution and Explanation window, Click "Solve, Analyse and Explain" to seek solution.
 9.  If solution is cryptic or unclear, repeating Step 8 will regenerate another output.
-10.  Click "Exit" to end the app, logging out, resetting application to default. No API keys are stored.
+10. Click "Exit" to end the app, logging out, resetting application to default. No API keys are stored.
 
 ## C. Inspiration ##
 This project is built with the inspiration of offering learners algebra self-help.
