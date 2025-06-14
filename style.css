@@ -280,7 +280,7 @@ button {
     border-radius: 5px;
 }
 
-/* Context menu styling _For Flowchart*/
+/* Context menu styling */
 .context-menu {
     position: absolute;
     background: white;
@@ -294,46 +294,25 @@ button {
 .context-menu button {
     display: block;
     width: 100%;
-    padding: 8px 15px;
+    padding: 15px 20px; /* Increased padding for touch targets */
     background: none;
     border: none;
     text-align: left;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px; /* Larger font for readability */
+    color: #000 !important;
 }
 
 .context-menu button:hover {
     background-color: #f0f0f0;
 }
 
-.hidden {
-    display: none;
-}
-
-/* Add to style.css */
-#flowchartContextMenu button {
-    color: black !important; /* Force black text */
-    background: none !important; /* Remove gray background */
-    font-weight: normal !important; /* Remove bold */
-    text-align: left;
-    padding: 8px 15px;
-    width: 100%;
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
-}
-
-#flowchartContextMenu button:hover {
-    background-color: #f0f0f0 !important; /* Light hover background */
-}
-
-/* Styling for Solution Output Save */
+/* For Solution Output Save */
 #solutionContextMenu button {
     color: black !important;
     background: none !important;
     font-weight: normal !important;
     text-align: left;
-    padding: 8px 15px;
     width: 100%;
     border: none;
     border-radius: 0;
@@ -342,4 +321,15 @@ button {
 
 #solutionContextMenu button:hover {
     background-color: #f0f0f0 !important;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .context-menu {
+        min-width: 180px; /* Wider menu for mobile */
+    }
+    
+    .math-display {
+        min-height: 200px; /* Taller container for better long-press */
+    }
 }
