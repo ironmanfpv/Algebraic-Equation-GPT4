@@ -8,6 +8,23 @@
     <title>Algebraic Equation GPT</title>
     <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <!--KaTeX version is checked against package-lock -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+      integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Add these script tags in the head section for Solution Output PDF save -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        // Make libraries available globally
+        window.jspdf = window.jspdf || {};
+    </script>
+
 </head>
 <body>
     <div id="initialInterface" class="container">
@@ -73,13 +90,34 @@
                 <div id="solutionOutput" class="dynamic-height math-display"></div>
                 <div id="loadingIndicator">
                     <div class="loading-spinner"></div>
-                    <span>Processing...</span>
+                    <span>Processing Solution and Explanation...</span>
                 </div>
             </div>
             <div class="button-container">
                 <button id="solveExplainButton">Solve, Analyse and Explain</button>
                 <button id="clearSolutionButton">Clear</button>
                 <button id="exitButton">Exit</button>
+            </div>
+        </div>
+
+        <!-- New Flowchart and Analysis Window -->
+        <div class="window">
+            <h2>Flowchart for Algorithm Pathways</h2>
+            <p class="editable-note">Generated flowchart may differ in complexity details. Ensure accurate query before clicking Create Flowchart.</p>
+            <p class="editable-note">Always verify the generated flowchart and analysis.</p>
+            <div id="flowchartContainer">
+                <div id="flowchartContainer">
+                    <div id="flowchartOutput" class="dynamic-height"></div>
+                    <div id="flowchartLoadingIndicator" style="display: none;">
+                        <div class="loading-spinner"></div>
+                            <span>Processing a possible Flowchart...</span>
+                        </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="createFlowchartButton">Create Flowchart</button>
+                <button id="clearFlowchartButton">Clear</button>
+                <button id="exitFlowchartButton">Exit</button>
             </div>
         </div>
 
@@ -90,11 +128,33 @@
         </div>
     </div>
     <div id="equation-output" class="math-container"></div>
+    <!-- For saving flowchart-->
+    <div id="flowchartContextMenu" class="context-menu hidden">
+        <button id="savePngBtn">Save as PNG</button>
+        <button id="saveJpgBtn">Save as JPG</button>
+    </div>
+    <!-- For saving Solution-->
+    <div id="solutionContextMenu" class="context-menu hidden">
+        <button id="saveSolutionAsPdf">Save as PDF</button>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"async></script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="./src/imageprocess.js"></script>
     <script src="./src/script.js"></script>
     <script src="./src/audiototext.js"></script>
     <script src="./src/solver.js"></script>
+    <script src="./src/flowchart.js"></script>
+
+
+    <!-- For mermaid diagrams-->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+    <!-- For solution output PDF-->
+    <div id="pdf-container" style="position: absolute; left: -9999px; top: -9999px; width: 700px;"></div>
+    
 </body>
 </html>
