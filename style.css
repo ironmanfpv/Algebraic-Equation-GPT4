@@ -332,4 +332,49 @@ button:hover {
     }
 }
 
-/* ======== ENHANCEMENTS END HERE ======== */
+/* ======== SLIDER STYLES ======== */
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.slider-container label {
+    min-width: 180px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+input[type="range"] {
+    flex: 1;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    outline: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-container span {
+    min-width: 60px;
+    text-align: right;
+    font-family: monospace;  /* monospace, sans-serif */
+    font-size: 0.95em;
+}/* ======== ENHANCEMENTS END HERE ======== */

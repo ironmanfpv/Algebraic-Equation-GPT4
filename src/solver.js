@@ -1,9 +1,26 @@
+// Initialize Solution Token Slider (This feature was completed on 20th June'2025, Friday)
+function initSolutionTokenSlider() {
+    const slider = document.getElementById('solutionTokenSlider');
+    const valueDisplay = document.getElementById('solutionTokenValue');
+    
+    // Set initial display value
+    valueDisplay.textContent = slider.value;
+    
+    // Update display when slider moves
+    slider.addEventListener('input', () => {
+        valueDisplay.textContent = slider.value;
+    });
+}
+
 async function solveEquation(equation, userName) {
     try {
         if (!window.openAIKey) throw new Error('API key is not set. Please go back and confirm your API key.');
 
+        // Get token budget from slider
+        const tokenBudget = parseInt(document.getElementById('solutionTokenSlider').value);
+
         const requestPayload = {
-            model: "o3-mini", // Upgraded to o3-mini (18 Feb'2025) : Previous Model options: gpt-3.5-turbo, o1-mini etc. 
+            model: "o3-mini",     // Upgraded to o3-mini (18 Feb'2025) : Previous Model options: gpt-3.5-turbo, o1-mini etc. 
             messages: [
                 {
                     role: "user", // "system" for gpt-3.5-turbo, "user" for o1-mini
@@ -24,8 +41,8 @@ async function solveEquation(equation, userName) {
                               provide the solution. Ensure to explain each step clearly and use LaTeX for all mathematical expressions.` 
                 }
             ],
-            max_completion_tokens: 100000, // max_tokens for gpt-3.5-turbo, max_completion_tokens for o1-mini, uncapped for o3-mini
-            temperature: 1                 // 0.3 for gpt-3.5-turbo, 1 for o1-mini
+            max_completion_tokens: tokenBudget, // Use solutionTokenValue value
+            temperature: 1                      // 0.3 for gpt-3.5-turbo, 1 for o1-mini, 1 for o3-mini
         };
 
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -79,7 +96,7 @@ function initSolutionPDFSave() {
         solutionContextMenu.classList.remove('hidden');
     });
 
-    // iOS touch support: long-press detection
+    // iOS touch support: long-press detection ; Successful integration on 15 June'2025
     solutionOutput.addEventListener('touchstart', function(e) {
         if (solutionOutput.innerHTML.trim() === '') return;
         longPressTimer = setTimeout(() => {
@@ -189,6 +206,9 @@ function initSolutionPDFSave() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize token slider
+    initSolutionTokenSlider();
+    
     // Solve button functionality
     document.getElementById('solveExplainButton').addEventListener('click', async function() {
         const equation = document.getElementById('extractedEquation').value;
@@ -225,6 +245,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('clearSolutionButton').addEventListener('click', function() {
         const solutionOutput = document.getElementById('solutionOutput');
         solutionOutput.innerHTML = '';
+        
+        // Reset token slider to default
+        document.getElementById('solutionTokenSlider').value = 8000;
+        document.getElementById('solutionTokenValue').textContent = '8000';
+        
         if (window.MathJax) {
             MathJax.typesetClear([solutionOutput]);
         }
