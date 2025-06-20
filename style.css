@@ -374,7 +374,7 @@ input[type="range"]::-moz-range-thumb {
 
 .slider-container span {
     min-width: 60px;
-    text-align: right;
+    text-align: left;
     font-family: monospace;  /* monospace, sans-serif */
     font-size: 0.95em;
 }/* ======== ENHANCEMENTS END HERE ======== */
